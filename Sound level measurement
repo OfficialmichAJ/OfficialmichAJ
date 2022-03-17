@@ -1,0 +1,9 @@
+adc= analogRead(MIC); //Read the ADC value from amplifer
+dB = (adc+83.2073) / 11.003; //Convert ADC value to dB using Regression values
+
+if (dB>60)
+{
+  digitalWrite(3, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(3, LOW);
+} 
